@@ -1,4 +1,4 @@
-/*
+:/*
 Theme: Murdoch
 Theme URI: http://www.mancunion.com
 Description: The theme for the mancunion website
@@ -107,7 +107,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-family: Georgia, serif;
     font-weight: bold;
     padding-bottom: 5px;
@@ -115,11 +115,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: Georgia, serif;
     font-weight: bold;
-    padding-bottom: 5px;
-
+    padding-bottom: 0px;
+	margin: 0px;
 }
 
 img {
@@ -127,7 +127,8 @@ img {
 }
 
 p {
-    padding: 5px 0px 5px 0px;
+    padding: 0px 0px 10px 0px;
+	margin-top: 2px;
 
     font-family: arial,sans-serif;
 }
@@ -166,6 +167,12 @@ header.php stuff
     padding-bottom: 10px;
 }
 
+#branding #ad-banner {
+    float:right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #branding #branding-top {
     border-bottom: 1px solid #BEBEBE;
     color: #bebebe;
@@ -191,9 +198,10 @@ header.php stuff
     background-color: #ebebeb;
     border-top: 2px solid #6b6b6b;
     border-bottom: 1px solid #6b6b6b;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-top: 6px;
     padding-bottom: 6px;
+	text-align: center;
 }
 
 #main-menu li {
@@ -206,7 +214,7 @@ header.php stuff
 .cat-item a{
     font-family: sans-serif;
     font-size: 12px;
-    padding: 0px 4px 0px 4px;
+    padding: 0px 3px 0px 3px;
     padding-top: 5px;
     padding-bottom: 4px;
     background-color: #ebebeb;
@@ -292,6 +300,16 @@ header.php stuff
     color: #E1004C;
 } /* Fashion and beauty */
 
+.category-1212 h1,
+.cat-item-1212 a {
+    color: #234B7B;
+} /* Science and Technology */
+
+.category-4 h1,
+.cat-item-4 a {
+    color: #234B7B;
+} /* Sport */
+
 .current-cat a {
     margin-bottom: -2px;
     border-top: 4px solid;
@@ -311,7 +329,7 @@ Gallery stuff
  */
 .main_image {
     width: 630px;
-    height: 423px;
+    height: 427px;
     float: left;
     background: #333;
     position: relative;
@@ -324,25 +342,30 @@ Gallery stuff
 .main_image p {
     font-size: 14px;
     line-height: 1.6em;
-    padding: 0px 0px 2px 0px;
+    padding: 10px 0px 2px 0px;
 }
 
 .main_image img {
     width: 630px;
-    height: 423px;
+    height: 427px;
 }
 
 .main_image .block a {
     color: white;
-    font-size: 1.8em;
+    
+    font-size: 1.6em;
 }
 
 .block h1 {
-    font-size: 1.5em;
+	font-size: 1.1em;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .block a {
+/*
     margin-bottom: 10px;
+*/
 }
 
 .block small { /*--We'll be using this same style on our thumbnail list--*/
@@ -388,9 +411,11 @@ Gallery stuff
     border-top: 1px solid #ccc;
 }
 .image_thumb img {
+/*
     border: 1px solid #ccc;
     padding: 5px;
     background: #fff;
+*/
     float: left;
     width: 88px;
 }
@@ -401,9 +426,9 @@ Gallery stuff
 }
 .image_thumb ul li{
     margin: 0;
-    padding: 10px 10px;
+    padding: 9px 10px 9px 15px;
     background: #b2b2b2* url(image/nav_a.gif) repeat-x; 
-    width: 373px;
+    width: 368px;
     /* height: 115px; */
     float: left;
     border-bottom: 1px solid #ccc;
@@ -419,7 +444,7 @@ Gallery stuff
     cursor: default;
 }
 html .image_thumb ul li h2 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 5px 0;
     padding: 0;
 }
@@ -428,6 +453,8 @@ html .image_thumb ul li h2 {
     margin-left: 10px;
     padding: 0;
     width: 250px;
+	height: 50px;
+	display: table;
 }
 .image_thumb ul li p{display: none;}/*--Hide the description on the list items--*/
 /*
@@ -544,12 +571,25 @@ li.section-lead {
 
 }
 
+h2.section-title {
+	margin: 0px;
+	padding: 0px;
+}
+
+h3.section-title {
+	margin: 0px;
+	padding: 0px;
+}
+
 #news-section a.category-header, #news-section a.section-title {
     color: #DD3100;
 }
 
 #news-section h2.category-name  {
     border-top: 3px solid #DD3100;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #comment-and-debate-section a.category-header, #comment-and-debate-section a.section-title {
@@ -558,6 +598,9 @@ li.section-lead {
 
 #comment-and-debate-section h2.category-name  {
     border-top: 3px solid #086FA1;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #music-section a.category-header, #music-section a.section-title {
@@ -566,6 +609,9 @@ li.section-lead {
 
 #music-section h2.category-name  {
     border-top: 3px solid #FF8700;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #features-section a.category-header, #features-section a.section-title {
@@ -574,6 +620,9 @@ li.section-lead {
 
 #features-section h2.category-name  {
     border-top: 3px solid #00B74A;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #politics-and-analysis-section a.category-header, #politics-and-analysis-section a.section-title {
@@ -582,6 +631,9 @@ li.section-lead {
 
 #politics-and-analysis-section h2.category-name  {
     border-top: 3px solid #DB0058;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #film-section a.category-header, #film-section a.section-title {
@@ -590,6 +642,9 @@ li.section-lead {
 
 #film-section h2.category-name {
     border-top: 3px solid #0772A1;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #food-drink-section a.category-header, #food-drink-section a.section-title {
@@ -598,6 +653,9 @@ li.section-lead {
 
 #food-drink-section h2.category-name {
     border-top: 3px solid #00AF64;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #literature-section a.category-header, #literature-section a.section-title {
@@ -606,6 +664,9 @@ li.section-lead {
 
 #literature-section h2.category-name {
     border-top: 3px solid #4573D5;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #arts-and-culture-section a.category-header, #arts-and-culture-section a.section-title {
@@ -614,6 +675,9 @@ li.section-lead {
 
 #arts-and-culture-section h2.category-name {
     border-top: 3px solid #FFA900;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #societies-section a.category-header, #societies-section a.section-title {
@@ -622,6 +686,9 @@ li.section-lead {
 
 #societies-section h2.category-name {
     border-top: 3px solid #1DD300;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #business-and-finance-section a.category-header, #business-and-finance-section a.section-title {
@@ -630,6 +697,9 @@ li.section-lead {
 
 #business-and-finance-section h2.category-name {
     border-top: 3px solid #1435AD;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #theatre-section a.category-header, #theatre-section a.section-title {
@@ -638,6 +708,9 @@ li.section-lead {
 
 #theatre-section h2.category-name {
     border-top: 3px solid #712D62;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 #lifestyle-section a.category-header, #lifestyle-section a.section-title {
@@ -646,6 +719,9 @@ li.section-lead {
 
 #lifestyle-section h2.category-name {
     border-top: 3px solid #00B060;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 
 
@@ -655,6 +731,31 @@ li.section-lead {
 
 #fashion-beauty-section h2.category-name {
     border-top: 3px solid #E1004C;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
+}
+
+#science-and-technology-section a.category-header, #science-and-technology-section a.section-title {
+    color: #234B7B;
+}
+
+#science-and-technology-section h2.category-name {
+    border-top: 3px solid #234B7B;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
+}
+
+#sport-section a.category-header, #sport-section a.section-title {
+    color: #234B7B;
+}
+
+#sport-section h2.category-name {
+    border-top: 3px solid #234B7B;
+	font-size: 1.5em;
+	margin: 0px;
+	padding-top: 3px;
 }
 /*
 
@@ -662,10 +763,15 @@ sidebar.php
 
 */
 
+#sidebar {
+	margin-top: 4px;
+	padding-left: 0px;
+}
+
 #side-info {
     float: right;
     margin-bottom: 10px;
-    margin-top: 5px;
+    margin-top: 0px;
     width: 210px;
 }
 
@@ -685,6 +791,15 @@ sidebar.php
 
 .widget li {
     padding-bottom: 5px;
+}
+
+#sidebar ul {
+    padding-left: 0px;
+}
+
+#sidebar img {
+    padding-bottom: 5px;
+
 }
 
 .twtr-widget {
@@ -733,6 +848,7 @@ category.php
 #category-title {
     border-bottom: 4px solid;
     margin-bottom: 5px;
+	margin-top: 0px;
 }
 
 
@@ -792,6 +908,7 @@ category.php
 .category-byline {
     display: block;
     line-height: 16px;
+	font-size: 14px;
 }
 
 .content-excerpt-image img {
@@ -877,20 +994,25 @@ single.php
 }
 
 #single-byline {
+/*
     border-top: 1px solid #bebebe;
+*/
     float: left;
-    padding: 5px 0px 5px 0px;
+    padding: 20px 0px 5px 0px;
     width: 500px;
 }
 
 #single-byline small {
     display: block;
     line-height: 16px;
+	font-size: 14px;
 }
 
 
 #single-main {
+/*
     border-top: 1px solid #bebebe;
+*/
     float: left;
     margin-right: 10px;
     padding-top: 10px;
@@ -903,7 +1025,9 @@ single.php
 }
 
 #single-side {
+/*
     border-top: 1px solid #bebebe;
+*/
     float: right;
     margin-left: 10px;
     padding-top: 10px;
@@ -912,20 +1036,28 @@ single.php
 
 #single-side h2 {
     font-size: 1em;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 }
 
 #single-side li {
     list-style: none;
 }
 
+.post-cat-bar {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bebebe;
+}
+
 .other-articles {
-    margin-bottom: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .other-articles li {
     color: #234B7B;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 2px;
 }
 
 .other-articles a {
@@ -952,14 +1084,11 @@ footer.php
 
 #footer li{
     display: inline;
-    font-family: serif;
-    margin-right: 10px;
+    font-family: sans-serif;
+	margin-right: 10px;
 }
 
 #footer img {
     float: left;
     margin: -10px 10px 20px 0px;
 }
-
-
-

@@ -58,7 +58,7 @@ $(document).ready(function() {
         /* Sort Sticky Posts, newest at the top */
         rsort( $sticky );
         /* Get top 3 Sticky Posts */
-        $sticky = array_slice( $sticky, 0, 5 );
+        $sticky = array_slice( $sticky, 0, 6 );
         $the_query = new WP_Query( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1 ) );
         $printed_articles_id = array();
         if ($the_query->have_posts()) : ?>
@@ -71,7 +71,7 @@ $(document).ready(function() {
                                 </a>
                                 <div class="desc">
                                     <div class="block">
-                                        <h2> <a class="link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                                        <h1> <a class="link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
                                         <?php the_excerpt(); ?>
                                     </div>
                                 </div>
@@ -82,14 +82,14 @@ $(document).ready(function() {
         <li>                
                    
                         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'title-image' ); ?>
-                        <a href="<?php echo $image[0] ?>"><?php the_post_thumbnail('feature-thumb-image'); ?><a>
-                        <div class="block">
+                        <a href="<?php echo $image[0] ?>" onClick="document.location.href='<?php the_permalink() ?>'; return false;"><?php the_post_thumbnail('feature-thumb-image'); ?><a>
+                        <div class="block" style="margin: 0px 0px 0px 10px">
                         <h1>
                             <a class="link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                                 <?php the_title(); ?>
                             </a>
                         </h1>
-                        <p><?php the_excerpt(); ?></p>
+                        <div style="margin-top: -20px; margin-bottom: 0px; line-height: 1.3em; height: 65px"><p><?php the_excerpt(); ?></p></div>
                         </div>
                     
                 </li>
@@ -100,14 +100,14 @@ $(document).ready(function() {
                 <li>                
                    
                         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'title-image' ); ?>
-                        <a href="<?php echo $image[0] ?>"><?php the_post_thumbnail('feature-thumb-image'); ?><a>
-                        <div class="block">
+                        <a href="<?php echo $image[0] ?>" onClick="document.location.href='<?php the_permalink() ?>'; return false;"><?php the_post_thumbnail('feature-thumb-image'); ?><a>
+                        <div class="block" style="margin: 0px 0px 0px 10px">
                         <h1>
                             <a class="link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
                                 <?php the_title(); ?>
                             </a>
                         </h1>
-                        <p><?php the_excerpt(); ?></p>
+                        <div style="margin-top: -15px; margin-bottom: 0px; line-height: 1.3em; height: 65px"><p><?php the_excerpt(); ?></p></div>
                         </div>
                     
                 </li>
@@ -169,8 +169,14 @@ $(document).ready(function() {
             <div id="lifestyle-section" class="section">
                 <?php murdoch_get_pyramid_column( 'lifestyle', $printed_articles_id ); ?>
             </div>
+            <div id="science-and-technology-section" class="section">
+                <?php murdoch_get_pyramid_column( 'science-and-technology', $printed_articles_id ); ?>
+            </div>
             <div id="arts-and-culture-section" class="section">
                 <?php murdoch_get_pyramid_column( 'arts-and-culture', $printed_articles_id ); ?>
+            </div>
+            <div id="sport-section" class="section">
+                <?php murdoch_get_pyramid_column( 'sport', $printed_articles_id ); ?>
             </div>
             
         </div><!-- section-right -->

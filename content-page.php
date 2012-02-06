@@ -29,12 +29,12 @@
 </div>
 <div class="cl"></div>
 <div id="single-side">
-    <h2>Other articles</h2>
+    <h2 style="font-size: 1.4em">Other articles</h2>
     <?php $categories = get_categories(); ?>
     <?php 
     
     foreach ( $categories as $category ) {
-        murdoch_get_headline( $category->slug, array ( get_the_ID() ) );
+       	murdoch_get_headline( $category->slug, array ( get_the_ID() ) );
      }
     ?>
         
@@ -45,7 +45,7 @@
         <?php the_author_posts_link(); ?>
     </small>
     <small>
-        <?php the_time('F jS, Y') ?>
+        <?php the_time('jS F Y') ?>
     </small>
 </div>
 <div id="single-main">

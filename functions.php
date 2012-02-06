@@ -138,10 +138,10 @@ function murdoch_get_pyramid_column( $section, $excluded_articles=array(), $numb
         if ($count < 5):
             if ( $count == 0 ):
                 print('</h2>');
-                printf('<p>%s</p><div class="cl"></div></li>', get_the_excerpt());
+                printf('<p style="margin: 5px 0px 0px 0px">%s... <a href="%s">Read more</a></p><div class="cl"></div></li>', limit_words(get_the_excerpt(), '20'), $permalink);
             else:
                 print('</h3>');
-                printf('<p>%s</p></li>', get_the_excerpt());
+                printf('<p style="margin: 5px 0px 0px 0px">%s... <a href="%s">Read more</a></p></li>', limit_words(get_the_excerpt(), '20'), $permalink);
             endif;
             if ( $count % 2 == 0):
                 printf('<div class="cl"></div>');
@@ -184,7 +184,7 @@ function murdoch_get_headline( $section, $exclude_posts=array() )
                                           'post__not_in' => $exclude_posts));
     echo "<div id=$section-section class='other-articles'>";
     if ( $the_query->have_posts() ):
-        printf('<a href="%s" class="category-header category-name"><h2>%s</h2></a>', $category_link, $category->cat_name);
+        printf('<a href="%s" class="category-header category-name"><h2 style="margin-bottom: 4px">%s</h2></a>', $category_link, $category->cat_name);
     endif;
     while ( $the_query->have_posts() ) : $the_query->the_post();
 	    printf ('<a href="%s">', get_permalink());
@@ -254,5 +254,71 @@ class JPB_User_Caps {
 
 $jpb_user_caps = new JPB_User_Caps();
 
+function limit_words($string, $word_limit) {
+	$words = explode(' ', $string);
+	return implode(' ', array_slice($words, 0, $word_limit));
+}
 
+function map_section_name($name) {
+	$newname = strtolower($name);
+
+	if ($newname == "blind-date-lifestyle") {
+		$newname = "lifestyle";
+	} else if ($newname == "travel-lifestyle") {
+		$newname = "lifestyle";
+	} else if ($newname == "volunteering") {
+		$newname = "lifestyle";
+	} else if ($newname == "drinkscorner-fooddrink") {
+		$newname = "food-drink";
+	} else if ($newname == "recipes-fooddrink") {
+		$newname = "food-drink";
+	} else if ($newname == "reviews-fooddrink") {
+		$newname = "food-drink";
+	} else if ($newname == "debate") {
+		$newname = "comment-and-debate";
+	} else if ($newname == "student-eye") {
+		$newname = "comment-and-debate";
+	} else if ($newname == "union-feature") {
+		$newname = "features";
+	} else if ($newname == "features-film") {
+		$newname = "film";
+	} else if ($newname == "previews") {
+		$newname = "film";
+	} else if ($newname == "reviews-film") {
+		$newname = "film";
+	} else if ($newname == "blog-spot") {
+		$newname = "arts-and-culture";
+	} else if ($newname == "feature") {
+		$newname = "arts-and-culture";
+	} else if ($newname == "interview-arts-and-culture") {
+		$newname = "arts-and-culture";
+	} else if ($newname == "review-arts-and-culture") {
+		$newname = "arts-and-culture";
+	} else if ($newname == "album-music") {
+		$newname = "music";
+	} else if ($newname == "column") {
+		$newname = "music";
+	} else if ($newname == "live-music-2") {
+		$newname = "music";
+	} else if ($newname == "preview") {
+		$newname = "music";
+	} else {
+		;
+	}
+
+	return $newname .  '-section';
+}
+
+function get_the_content_with_formatting($more_link_text = '(more...)', $stripteaser = 0, $more_file = '') {
+	$content = get_the_content($more_link_text, $stripteaser, $more_file);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	return $content;
+}
+
+add_filter('excerpt_length', 'my_excerpt_length');
+
+function my_excerpt_length($length) {
+	return 20;
+}
 ?>

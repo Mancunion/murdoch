@@ -14,7 +14,7 @@
             </a>
         </h2>
         <small>
-            <?php the_time('F jS, Y') ?> by <?php the_author_posts_link(); ?>
+            <?php the_time('jS F Y') ?> by <?php the_author_posts_link(); ?>
         </small>
         <div class="entry">
             <?php the_excerpt(); ?>

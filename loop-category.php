@@ -4,13 +4,17 @@
     <div id="category-posts">
     <?php $count = 1; ?>
     <div class="category-sub">
-        <?php while ( have_posts() && $count < 9 ) :
+        <?php while (  have_posts() ) :
             the_post();
             get_template_part( 'content', 'thumb' );
             if ( $count % 4 == 0):
                 print('<div class="cl"></div>');
             endif;
             $count ++;
+
+			if ($count > 12) {
+				break;
+			}
         endwhile; ?>
     </div>
     </div>

@@ -48,6 +48,7 @@
     ?>
     </title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/image/favicon.ico" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php
@@ -64,8 +65,8 @@
          */
         wp_head();
     ?>
-    <link rel="stylesheet" type="text/css" href="http://www.webputty.net/css/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRjl2xMM" />
-<script type="text/javascript">(function(w,d){if(w.location!=w.parent.location||w.location.search.indexOf('__preview_css__')>-1){var t=d.createElement('script');t.type='text/javascript';t.async=true;t.src='http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRjl2xMM';(d.body||d.documentElement).appendChild(t);}})(window,document);</script>
+<link rel="stylesheet" type="text/css" href="//webputty.commondatastorage.googleapis.com/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiT2CkM.css" />
+<script type="text/javascript">(function(w,d){if(w.location!=w.parent.location||w.location.search.indexOf('__preview_css__')>-1){var t=d.createElement('script');t.type='text/javascript';t.async=true;t.src='http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiT2CkM';(d.body||d.documentElement).appendChild(t);}})(window,document);</script>
 <script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/jquery-1.6.2.js"></script>
  <script type="text/javascript">
  $(document).ready(function() {
@@ -143,10 +144,14 @@
         <?php echo get_bloginfo ('description'); ?>
         </div>
         </div>
+        <div id="ad-banner">
+            <img src="<?php bloginfo('template_directory'); ?>/image/mobile-ad.jpg"/>
+        </div>
         <div class="cl"></div>
 
     </header><!-- #branding -->
-    <nav id="main-menu">
-        <?php wp_list_categories( array( 'exclude' => '3836', 'title_li' => '', 'hierarchical' => false ) ); ?>
-    </nav>
+    <div id="main-menu">
+		<li class="cat-item"><a href="/" title="Home">Home</a></li>
+        <?php wp_list_categories( array( 'include' => '18,20,3,3509,3512,6,7,11,3513,1212,143,9,21,5,4,3837', 'title_li' => '', 'hierarchical' => false ) ); ?>
+    </div>
 <div id="main">
