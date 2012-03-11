@@ -1,5 +1,5 @@
 Murdoch theme
 =============
 
-Murdoch is the wordpress theme for the Mancunion newspaper
+Murdoch is the wordpress theme for the Mancunion newspaper.
 
