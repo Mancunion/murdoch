@@ -150,8 +150,20 @@
         <div class="cl"></div>
 
     </header><!-- #branding -->
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#main-menu  > li").hover(function() {
+            $(this).find("ul.children").stop(true, true).show(); 
+            $(this).hover(function() {
+            }, function() {
+                $(this).find("ul.children").stop(true, true).hide();
+            });
+        });
+    });
+    </script>
     <div id="main-menu">
 		<li class="cat-item"><a href="/" title="Home">Home</a></li>
-        <?php wp_list_categories( array( 'include' => '18,20,3,3509,3512,6,7,11,3513,1212,143,9,21,5,4,3837', 'title_li' => '', 'hierarchical' => false ) ); ?>
+        <?php wp_list_categories( array('exclude' => '4122,4813,3836', 'title_li' => '', 'hierarchical' => True, 'depth' => 2) ); ?>
     </div>
 <div id="main">

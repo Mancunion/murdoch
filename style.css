@@ -207,18 +207,17 @@ header.php stuff
 #main-menu li {
     display: inline;
     font-family: serif;
-    
     list-style-type: none;
+    position: relative;
 }
 
 .cat-item a{
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     padding: 0px 3px 0px 3px;
     padding-top: 5px;
     padding-bottom: 4px;
     background-color: #ebebeb;
-
 }
 
 .cat-item a:hover {
@@ -227,8 +226,41 @@ header.php stuff
     text-decoration: none;
 }
 
+#main-menu li ul.children {
+    border-left: 1px solid #6b6b6b;
+    border-right: 1px solid #6b6b6b;
+    border-bottom: 1px solid #6b6b6b;
+    list-style: none;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 20px;
+    background-color: #ebebeb;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    float: left;
+    text-align: left;
+    display: none;
+    z-index: 1;
+}
+
+#main-menu li ul.children li.cat-item a {
+    display: block;
+    clear: both;
+    background-color: transparent;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+#main-menu li.current-cat ul.children li a {
+    border: 0px;
+}
 
 
+#main-menu li ul.children li.cat-item a:hover {
+    color: #bebebe;
+    text-decoration: none;
+}
 .category-3509 h1,
 .cat-item-3509 a { 
     color: #DD3100;
