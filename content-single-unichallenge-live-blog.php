@@ -54,6 +54,9 @@
         <iframe width="270" height="150" src="http://www.youtube.com/embed/5KDEI0uS44c?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="side-item">
+        <h2 style="font-size:20px;margin-top:10px;">Profiles: the Manchester finalists</h2>
+    </div>
+    <div class="side-item">
         <h2>Burke</h2>
         <?php
             echo '<img src="';
