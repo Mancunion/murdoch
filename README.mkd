@@ -5,3 +5,8 @@ Murdoch is the wordpress theme for the Mancunion newspaper.
 
 email lloyd.w.henning@gmail.com for help
 
+Plugins
+=======
+Live Blogging
+http://wordpress.org/extend/plugins/live-blogging/
+

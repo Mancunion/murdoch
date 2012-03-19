@@ -1066,9 +1066,14 @@ single.php
     width: 270px;
 }
 
+#single-side .side-item {
+    margin-bottom: 10px;
+}
+
+
 #single-side h2 {
     font-size: 1em;
-    padding-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 #single-side li {
