@@ -66,8 +66,8 @@
         wp_head();
     ?>
 <!--<link rel="stylesheet" type="text/css" href="//webputty.commondatastorage.googleapis.com/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiT2CkM.css" />
-<script type="text/javascript">(function(w,d){if(w.location!=w.parent.location||w.location.search.indexOf('__preview_css__')>-1){var t=d.createElement('script');t.type='text/javascript';t.async=true;t.src='http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiT2CkM';(d.body||d.documentElement).appendChild(t);}})(window,document);</script>
-<script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/jquery-1.6.2.js"></script>-->
+<script type="text/javascript">(function(w,d){if(w.location!=w.parent.location||w.location.search.indexOf('__preview_css__')>-1){var t=d.createElement('script');t.type='text/javascript';t.async=true;t.src='http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiT2CkM';(d.body||d.documentElement).appendChild(t);}})(window,document);</script>-->
+<script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/jquery-1.6.2.js"></script>
  <script type="text/javascript">
  $(document).ready(function() {
        $(".feature-wrapper").click(function() {
