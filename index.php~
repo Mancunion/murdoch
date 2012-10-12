@@ -107,7 +107,7 @@ $(document).ready(function() {
                                 <?php the_title(); ?>
                             </a>
                         </h1>
-                        <div style="margin-top: -15px; margin-bottom: 0px; line-height: 1.3em; height: 65px"><p><?php the_excerpt(); ?></p></div>
+                        <div style="margin-top: -15px; margin-bottom: 10px; line-height: 1.3em; height: 65px"><p><?php the_excerpt(); ?></p></div>
                         </div>
                     
                 </li>

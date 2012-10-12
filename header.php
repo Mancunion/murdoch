@@ -78,16 +78,16 @@
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-25601882-1']);
-      _gaq.push(['_trackPageview']);
-      
+        _gaq.push(['_setAccount', 'UA-35514233-1']);
+        _gaq.push(['_trackPageview']);
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-                          
-  </script>
+      })();
+
+</script>
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
@@ -115,7 +115,7 @@
         <div id="branding-bottom">
             <hgroup>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    <img src="<?php bloginfo('template_directory'); ?>/image/mancunion-logo.png" title="" alt="" />
+                    <img src="<?php bloginfo('template_directory'); ?>/image/Mancunion Logo 2012-2013.jpg" title="" alt="" />
                 </a>
             </hgroup>
 
@@ -140,12 +140,12 @@
             </a>
             <?php endif; // end check for removed header image ?>
             
-        <div id="description">
-        <?php echo get_bloginfo ('description'); ?>
-        </div>
+          <div id="description">
+            <?php echo get_bloginfo ('description'); ?>
+          </div>
         </div>
         <div id="ad-banner">
-            <img src="<?php bloginfo('template_directory'); ?>/image/mobile-ad.jpg"/>
+            <!--<img src="<?php //bloginfo('template_directory'); ?>/image/mobile-ad.jpg"/>-->
         </div>
         <div class="cl"></div>
 
@@ -164,6 +164,6 @@
     </script>
     <div id="main-menu">
 		<li class="cat-item"><a href="/" title="Home">Home</a></li>
-        <?php wp_list_categories( array('exclude' => '4122,4813,3836', 'title_li' => '', 'hierarchical' => True, 'depth' => 2) ); ?>
+        <?php wp_list_categories( array('exclude' => '4122,4813,3836,5471,5472,5473', 'title_li' => '', 'hierarchical' => True, 'depth' => 2) ); ?>
     </div>
 <div id="main">

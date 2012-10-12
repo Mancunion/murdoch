@@ -33,9 +33,16 @@
     <?php $categories = get_categories(); ?>
     <?php 
     
-    foreach ( $categories as $category ) {
+    // The following categories shouldn't be displayed in the other articles section (to the right of the article) 
+    // or the category header (to the top of the article). Aryeh
+    $hiddenCategories = array("uncategorized", "editor approved", "sub-editor approved", "section editor approved");
+            
+    foreach ( $categories as $category ) 
+    {
+      // Ensure category is not a hidden category
+		  if (!in_array(strtolower($category->name),$hiddenCategories))
        	murdoch_get_headline( $category->slug, array ( get_the_ID() ) );
-     }
+    }
     ?>
         
 </div>
